@@ -265,7 +265,30 @@ section {
     text-align: center;
 }
 
-.portfolio{
+.portfolio .heading {
+    text-align: center;
+}
+
+.portfolio {
+    background: var(--gray);
+}
+
+.portfolio-container {
     display: grid;
-    grid-template: 
+    /* grid-template: 100px 100px/repeat(auto-fill, minmax(100px, 1fr)); */
+    /* grid-auto-rows: 100px; */
+    /* grid-template-columns: repeat(auto-fill, minmax(1fr, auto)); */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.portfolio-container .portfolio-box {
+    position: relative;
+}
+
+.portfolio-box img {
+    height: 25vh;
+    width: 25vw;
+    position: absolute;
 }
