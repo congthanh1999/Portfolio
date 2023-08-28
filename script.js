@@ -1,15 +1,21 @@
-let array = [10, 20, 30, 80, 19, 29, 23, 100, 102, 108];
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header navbar li');
+let navbar = document.querySelector('header');
 
-let shuffle = (arr) => {
-    for (let i = 0; i < arr.length; i++) {
-        let randomIndex = Math.floor(Math.random() * arr.length);
-        let temp = arr[i];
-        arr[i] = arr[randomIndex];
-        arr[randomIndex] = temp;
-    }
-    return arr;
-}
+console.log(navbar.offsetHeight);
 
-shuffle(array)
-console.log(`Array length ${array.length}`);
-console.log(...array);
+window.onscroll = () => {
+    sections.forEach(section => {
+        let top = window.scrollY + navbar.offsetHeight;
+        let offset = section.offsetTop;
+        let height = section.offsetHeight;
+        let id = section.getAttribute('id');
+
+        if (top >= offset && top <= height) {
+            navLinks.forEach(navLink => {
+                navLink.classList.remove('active');
+                document.querySelector(`header navbar a[href* = ${id}]`).classList.add('active');
+            });
+        };
+    });
+};
