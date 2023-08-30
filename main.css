@@ -379,3 +379,9 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 50%;
+    }
+}
