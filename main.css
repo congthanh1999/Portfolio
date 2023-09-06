@@ -382,6 +382,21 @@ input[type=number] {
 
 @media (max-width: 412px) {
     html {
-        font-size: 55%;
+        /* font-size: 55%; */
+    }
+
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        float: none;
+    }
+
+    .header .logo{
+        font-size: 2rem;
+    }
+
+    .header ul li{
+        display: none;
     }
 }
