@@ -18,8 +18,8 @@ section {
 
 :root {
     --main-color: hsl(160, 95%, 34%);
-    /* --secondary-color: hsl(149, 47%, 64%);
-    --bg-color: hsl(88, 43%, 74%); */
+    --secondary-color: hsl(149, 47%, 64%);
+    --bg-color: hsl(88, 43%, 74%);
     --text-color: hsl(34, 100%, 72%);
     --whitesmoke: hsl(0, 0%, 96%);
     --gray: hsl(0, 0%, 86%);
@@ -59,7 +59,7 @@ section {
 }
 
 #menu-icon {
-    display: none;
+    /* display: none; */
 }
 
 .home {
@@ -381,22 +381,24 @@ input[type=number] {
 }
 
 @media (max-width: 412px) {
-    html {
-        /* font-size: 55%; */
-    }
-
     .header {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        float: none;
+        flex-direction: column-reverse;
+        /* justify-content: center;
+        align-items: center; */
+        /* float: none; */
     }
 
-    .header .logo{
-        font-size: 2rem;
+    .header i {
+        font-size: 3rem;
+        color: var(--whitesmoke);
     }
 
-    .header ul li{
-        display: none;
+    .header ul li {
+        display: flex;
     }
+s
+    .header .logo-container {
+        display: grid;
+        grid-template: 1fr / 1fr 1fr 1fr;
+    } 
 }
