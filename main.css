@@ -59,7 +59,7 @@ section {
 }
 
 #menu-icon {
-    /* display: none; */
+    display: none;
 }
 
 .home {
@@ -381,24 +381,43 @@ input[type=number] {
 }
 
 @media (max-width: 412px) {
-    .header {
-        flex-direction: column-reverse;
-        /* justify-content: center;
-        align-items: center; */
-        /* float: none; */
-    }
 
-    .header i {
+    #menu-icon {
+        display: block;
         font-size: 3rem;
         color: var(--whitesmoke);
     }
 
-    .header ul li {
-        display: flex;
+    #menu-icon:hover {
+        cursor: pointer;
     }
-s
+
+    .header {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .navbar .active {
+        display: block;
+    }
+
+    .navbar ul li {
+        display: block;
+        flex-direction: column;
+        background: var(--secondary-color);
+        margin: 0;
+        padding: 0.5rem;
+        width: 100vw;
+    }
+
     .header .logo-container {
         display: grid;
         grid-template: 1fr / 1fr 1fr 1fr;
-    } 
+        padding: 2rem 0;
+    }
 }
