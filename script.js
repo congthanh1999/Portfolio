@@ -4,6 +4,7 @@ let header = document.querySelector('header');
 
 let navbar = document.querySelector('.navbar');
 let menuIcon = document.querySelector('#menu-icon');
+let homeSection = document.querySelector('.navbar #home')
 
 window.onscroll = () => {
     sections.forEach(section => {
